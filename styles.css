@@ -3707,44 +3707,39 @@ img:not([src]), img[src=''] {
         font-size: 0.9rem;
     }
 }
-/* --- LOOK APPLE MUSIC iOS 26 --- */
-
-/* 1. Couleurs et Police */
+/* --- THEME APPLE MUSIC iOS 26 --- */
 :root {
-    --accent-color: #fa243c !important; /* Le rouge Apple */
+    --accent-color: #fa243c !important; /* Rouge Apple */
+    --bg-color: #000000 !important; /* Noir profond */
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
-    background-color: #000 !important;
 }
 
-/* 2. Effet de flou translucide (Glassmorphism) */
+/* Transparence et Flou iOS */
 .bottom-nav, .nav-bar, .player-bar, .header {
-    background: rgba(25, 25, 25, 0.7) !important;
-    backdrop-filter: blur(30px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    background: rgba(25, 25, 25, 0.75) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
     border: none !important;
 }
 
-/* 3. Boutons arrondis (Lecture / Aléatoire) */
+/* Boutons Lecture/Aléatoire arrondis */
 .play-buttons-container button, .action-btn {
-    border-radius: 14px !important;
+    border-radius: 12px !important;
     background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #fa243c !important; 
+    color: #fa243c !important;
     font-weight: 600 !important;
     border: none !important;
-    padding: 10px 20px !important;
 }
 
-/* 4. Arrondi des albums (18% comme iOS) */
+/* Pochettes d'albums (l'arrondi exact d'Apple) */
 img, .album-art, .track-cover {
     border-radius: 18% !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
 }
 
-/* 5. Fluidité des animations */
-* {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+/* Barre de progression rouge */
+.progress-bar-fill {
+    background-color: #fa243c !important;
 }
-
